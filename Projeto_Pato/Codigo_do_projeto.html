@@ -1,0 +1,102 @@
+%%html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coelho Matemático - Treino de Cálculo Mental</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #90EE90 0%, #3CB371 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #E8F8E8;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 100, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            border: 5px solid #66BB6A;
+            position: relative;
+        }
+
+        .container::before {
+            content: '✨';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 2em;
+            animation: twinkle 1.5s infinite;
+        }
+
+        .container::after {
+            content: '✨';
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            font-size: 2em;
+            animation: twinkle 1.5s infinite 0.5s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        /* Telas */
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tela de Boas-vindas */
+        .welcome-title {
+            font-size: 3em;
+            color: #2D6A2D;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0px rgba(102, 187, 106, 0.5);
+        }
+
+        .welcome-subtitle {
+            font-size: 1.3em;
+            color: #4CAF50;
+            margin-bottom: 40px;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .welcome-icon {
+            font-size: 5em;
+    
